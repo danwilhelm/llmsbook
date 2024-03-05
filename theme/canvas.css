@@ -1,0 +1,22 @@
+.canvas-figure {
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.tall {
+  height: 15em;
+}
+
+canvas {
+  /* border: 1px solid white; */
+  /* object-fit: contain; */
+  flex: 0 100%;
+  overflow: hidden;
+  background-color: #000000;
+  height: 15em;
+}

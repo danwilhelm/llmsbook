@@ -1,0 +1,32 @@
+[book]
+title = "LLM Foundations"
+authors = ["Dan Wilhelm"]
+description = "We'll learn how Large Language Models (LLMs) work from the ground up by coding transformers from scratch. Our thesis is that understanding small circuits leads to a better understanding of large ones."
+
+language = "en"
+multilingual = false
+src = "src"
+
+
+[output.html]
+default-theme = "navy"
+mathjax-support = false
+
+additional-js = ["theme/pagetoc.js", "theme/canvas.js", 
+                 "theme/mermaid.min.js", "theme/mermaid-init.js"]
+additional-css = ["theme/pagetoc.css", "theme/canvas.css"]
+
+git-repository-url = "https://github.com/danwilhelm/llmsbook"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/danwilhelm/llmsbook/edit/main/{path}"
+site-url = "/"
+cname = "llms.danwil.com"
+
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.katex]
+after = ["links"]
