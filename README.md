@@ -1,6 +1,6 @@
 # LLM Foundations (early book draft)
 
-### See the book live at [https://llms.danwil.com](https://llms.danwil.com).
+### See the book live at [https://llms.danwil.com](https://llmsbook.com).
 
 by Dan Wilhelm
 

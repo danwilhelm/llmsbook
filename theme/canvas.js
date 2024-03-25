@@ -75,17 +75,17 @@ function drawCanvas(ctx, width, height) {
     ctx.globalAlpha = 1.0;
     ctx.setLineDash([]);
     drawArrow(ctx, 0,height, 3*width/4,height-classOffset, "rot 0 class");
-    drawArrow(ctx, 0,height, width/8,classOffset, "rot 3 class");
+    drawArrow(ctx, 0,height, width/16,classOffset, "rot 5 class");
     ctx.fillStyle = "rgb(255 50 50)";
     ctx.strokeStyle = "rgb(255 50 50)";
-    drawArrow(ctx, 0,height, width/4,classOffset*2, "ciphertext");
+    drawArrow(ctx, 0,height, width/8,classOffset*2, "ciphertext");
 
     // Axes
     ctx.fillStyle = "rgb(255 255 255)";
     ctx.strokeStyle = "rgb(255 255 255)";
     ctx.lineWidth = 3;
     drawArrow(ctx, 0,height, width,height, "'e' freq");
-    drawArrow(ctx, 0,height, 0,0, "'h' freq");
+    drawArrow(ctx, 0,height, 0,0, "'b' freq");
 
     ctx.restore();
 }
