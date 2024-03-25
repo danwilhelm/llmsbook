@@ -29,30 +29,6 @@ pred_class = np.argmax(self.logits[-1])  # final row incl all tokens
 ```
 
 
-## Dot Product as a Similarity Measure
-
-Let's investigate how the dot product can be a similarity measure.
-
-It is most related to **cosine similarity**, i.e. the cosine of the angle between two vectors.
-
-> The cosine similarity is bounded between [-1, 1], with a larger score indicating more similar.
-> - Vectors in the same direction have a similarity of $1$, since: $\cos{0} = 1$, e.g. $[1,0] \cdot [1,0] = 10$.
-> - Vectors in the opposite direction have a similarity of $-1$, since: $\cos \pi = -1$, e.g. $[1,0] \cdot [-1,0] = -1$.
-> - Orthogonal vectors (at a 90-degree angle) have a similarity of $0$, since: $\cos \pi/2 = 0$, e.g. $[1,0] \cdot [0,1] = 0$.
-
-In many textbooks, the dot product is defined directly in terms of the angle between the vectors. Where $u,v$ are vectors, $|u|,|v|$ are their magnitudes, $\hat{u}$ is the unit vector in the direction of $u$, and $\theta$ is the angle between the vectors:
-
-$$
-\begin{align}
-&& u \cdot v := && |u||v| \cos{\theta} \\
-\iff && \hat{u} \cdot \hat{v} := && \cos{\theta}. \\
-\end{align}
-$$
-
-Hence, the dot product by itself is effectively an "un-normalized" cosine similarity. This means it can be affected by magnitude!
-
-> This is especially apparent in modern LLMs if the embeddings are unembedded by themselves. Using cosine similarity, each token will match best with itself. However, merely using the dot product will cause many tokens to match with other tokens with larger magnitude.
-
 That said, in many cases it is fairly safe to think of the dot product as related to the "angle" between the vectors:
 
 > Let's interpret our example above in terms of vector angles. We can imagine the $e$ embedding as $(1, 0)$ (the $x$-axis) and the $h$ embedding as $(0, 1)$ (the $y$-axis). Then, the rotation 0 class vector would point toward $(0.12, 0.01)$ and the rotation 1 class vector toward $(0.01, 0.12)$.

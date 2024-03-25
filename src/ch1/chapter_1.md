@@ -1,12 +1,9 @@
-# Chapter 1: Solving Cryptograms
+# Chapter 1: Solving Cryptograms by Designing a Transformer
 
-In this chapter, we will examine how natural language statistics can be encoded in transformer weights. To do this, we'll handcraft a simple transformer that solves cryptograms encoded using a **Caesar cipher** (a fixed letter rotation).
+In this chapter, we will encode natural language statistics in transformer weights. To gain a strong understanding, we'll handcraft a transformer circuit step-by-step from first principles. The result will solve cryptograms encoded using a **Caesar cipher** (a fixed-letter rotation).
 
-<div class="warning">
-This problem was originally presented by Callum McDougall as an interpretability challenge as part of his <a href="https://github.com/callummcdougall/ARENA_3.0">ARENA bootcamp</a>. For more practice, you can explore his <a href="https://colab.research.google.com/drive/1pW1qAd52ZRf6gU-fTORjVyVKHuoLzJzH">PyTorch-trained transformer model</a> of the same problem.
-</div>
 
-## Cryptograms Intro
+## Cryptogram Intro
 
 A **Caesar cipher** is a code where each letter has been rotated forward by a fixed number. Given rotated text (**ciphertext**), the challenge is to determine the original rotation number (and thereby recover the original **plaintext**).
 

@@ -1,6 +1,6 @@
 # LLM Foundations (early book draft)
 
-by Dan Wilhelm
+by [Dan Wilhelm](https://danwil.com/)
 
 In this book, we develop a low-level understanding of Large Language Models (LLMs). To understand large circuits, we apply learnings from mathematics and the analysis of small circuits.
 
